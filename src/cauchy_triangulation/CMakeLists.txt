@@ -1,0 +1,5 @@
+find_package(Eigen3 REQUIRED NO_MODULE)
+
+add_library(cauchy_triangulation INTERFACE cauchy_triangulation.cpp cauchy_triangulation.hpp)
+target_include_directories(cauchy_triangulation INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(cauchy_triangulation INTERFACE gtsam Eigen3::Eigen)
